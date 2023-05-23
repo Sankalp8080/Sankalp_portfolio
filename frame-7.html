@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./frame-7.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic Neue:ital,wght@0,400;0,700;1,700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="frame-parent">
+      <div class="educationvariant3-parent">
+        <div class="educationvariant3">
+          <img
+            class="educationvariant3-child"
+            alt=""
+            src="./public/rectangle-6@2x.png"
+            data-animate-on-scroll
+          />
+
+          <label class="education4" data-animate-on-scroll>Education</label>
+          <div class="college-name-parent" data-animate-on-scroll>
+            <label class="college-name">College Name:</label>
+            <label class="degree-in">Degree In:</label>
+            <label class="passing-year">Passing Year:</label>
+            <label class="current-cgpa">Current CGPA:</label>
+            <label class="xavier-instituted-of"
+              >Xavier Instituted of Engineering</label
+            >
+            <label class="computer-engineering">Computer Engineering </label>
+            <label class="label1">2022-23</label>
+            <label class="label2">9.43</label>
+          </div>
+          <div class="board-parent" data-animate-on-scroll>
+            <label class="board">Board:</label>
+            <label class="passing-year1">Passing Year:</label>
+            <label class="percentage">Percentage:</label>
+            <label class="school-name">School Name:</label>
+            <label class="rameshwar-vidya-mandir">Rameshwar Vidya Mandir</label>
+            <label class="ssc">SSC</label>
+            <label class="label3">2016-17</label>
+          </div>
+          <div class="degree-in-parent" data-animate-on-scroll>
+            <label class="board">Degree In:</label>
+            <label class="passing-year1">Passing Year:</label>
+            <label class="percentage">Percentage:</label>
+            <label class="school-name">College Name:</label>
+            <label class="rameshwar-vidya-mandir"
+              >Shri Bhagubhai Mafatlal Polytechnic
+            </label>
+            <label class="ssc">Information Technology</label>
+            <label class="label3">2019-20</label>
+          </div>
+          <img
+            class="optffc-582-removebg-preview-1-icon"
+            alt=""
+            src="./public/120561optffc582removebgpreview-1@2x.png"
+            data-animate-on-scroll
+          />
+
+          <div class="educationvariant3-item" data-animate-on-scroll></div>
+          <a class="sankalp4" href="./index.html" data-animate-on-scroll>Sankalp</a>
+          <a class="education5" href="#" data-animate-on-scroll>Education</a>
+          <a class="certification5" href="./frame-8.html" data-animate-on-scroll
+            >Certification</a
+          >
+          <a class="skills5" href="./frame-9.html" data-animate-on-scroll
+            >Skills</a
+          >
+          <a class="projects5" href="./frame-10.html" data-animate-on-scroll
+            >Projects</a
+          >
+          <a class="contact4" href="./frame-11.html" data-animate-on-scroll
+            >Contact</a
+          >
+        </div>
+        <div class="indexgroup-7variant3" data-animate-on-scroll>
+          <div class="rectangle-parent">
+            <div class="group-child"></div>
+            <img class="group-item" alt="" src="./public/rectangle-3.svg" />
+          </div>
+          <b class="b">92.40%</b>
+        </div>
+        <div class="indexgroup-6variant3" data-animate-on-scroll>
+          <div class="group-child"></div>
+          <img
+            class="indexgroup-6variant3-item"
+            alt=""
+            src="./public/rectangle-5.svg"
+          />
+
+          <b class="b1">83.80%</b>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>

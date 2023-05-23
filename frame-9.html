@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./frame-9.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic Neue:ital,wght@0,400;0,700;1,700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="skillsvariant3-parent">
+      <div class="skillsvariant3">
+        <label class="skills2" data-animate-on-scroll>Skills</label>
+        <img
+          class="skillsvariant3-child"
+          alt=""
+          src="./public/rectangle-8@2x.png"
+          data-animate-on-scroll
+        />
+
+        <img
+          class="image-removebg-preview-3-1"
+          alt=""
+          src="./public/imageremovebgpreview-3-1@2x.png"
+          data-animate-on-scroll
+        />
+
+        <label class="adobe-xd-figma-container" data-animate-on-scroll>
+          <ul class="adobe-xd-figma-uiux-html">
+            <li class="adobe-xd-figma">Adobe XD, Figma (UI/UX)</li>
+            <li class="adobe-xd-figma">HTML & CSS,JS</li>
+            <li class="adobe-xd-figma">PHP ,SQL</li>
+            <li class="adobe-xd-figma">ASP.NET</li>
+            <li class="adobe-xd-figma">Blender</li>
+            <li class="adobe-xd-figma">GoLang</li>
+            <li class="adobe-xd-figma">Kotlin</li>
+            <li class="adobe-xd-figma">Dart</li>
+            <li>GoLang</li>
+          </ul>
+        </label>
+      </div>
+      <div class="frame-item" data-animate-on-scroll></div>
+      <a class="sankalp2" href="./index.html" data-animate-on-scroll
+        >Sankalp</a
+      >
+      <a class="education2" href="./frame-7.html" data-animate-on-scroll>Education</a>
+      <a class="certification2" href="./frame-8.html" data-animate-on-scroll
+        >Certification</a
+      >
+      <a class="skills3" data-animate-on-scroll>Skills</a>
+      <a class="projects3" href="./frame-10.html" data-animate-on-scroll
+        >Projects</a
+      >
+      <a class="contact2" href="./frame-11.html" data-animate-on-scroll
+        >Contact</a
+      >
+    </div>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>

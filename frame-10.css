@@ -1,0 +1,179 @@
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.skillsprojectvariant3-child {
+  position: absolute;
+  top: 191px;
+  left: 101px;
+  border-radius: var(--br-11xl);
+  width: 988px;
+  height: 594px;
+  object-fit: cover;
+  opacity: 0;
+}
+.skillsprojectvariant3-child.animate {
+  animation: 1s ease 1.7s 1 normal forwards slide-in-left;
+}
+.envio-18-removebg-preview-1-icon {
+  position: absolute;
+  top: 212px;
+  left: 914px;
+  width: 526px;
+  height: 528px;
+  object-fit: cover;
+  opacity: 0;
+}
+.envio-18-removebg-preview-1-icon.animate {
+  animation: 1s ease 1.7s 1 normal forwards slide-in-right;
+}
+.projects1 {
+  cursor: pointer;
+  position: absolute;
+  top: 116px;
+  left: 101px;
+  font-style: italic;
+  font-weight: 700;
+  opacity: 0;
+}
+.projects1.animate {
+  animation: 1s ease 1.6s 1 normal forwards slide-in-left;
+}
+.portfolio-figma {
+  margin-bottom: 0;
+}
+.portfolio-figma-flutter-g {
+  margin: 0;
+  padding-left: var(--padding-18xl);
+}
+.portfolio-figma-container {
+  cursor: pointer;
+  position: absolute;
+  top: 246px;
+  left: 179px;
+  font-size: var(--font-inherit);
+  font-style: italic;
+  font-weight: 700;
+  font-family: var(--font-inherit);
+  opacity: 0;
+}
+.portfolio-figma-container.animate {
+  animation: 1s ease 1.9s 1 normal forwards slide-in-left;
+}
+.frame-child,
+.skillsprojectvariant3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+}
+.skillsprojectvariant3 {
+  background: linear-gradient(
+    -72.71deg,
+    rgba(120, 50, 74, 0.75) 10.58%,
+    rgba(253, 224, 50, 0.66)
+  );
+  height: 800px;
+  overflow: hidden;
+  text-align: justify;
+  font-size: var(--font-size-17xl);
+}
+.frame-child {
+  border-radius: 0 0 var(--br-xl) var(--br-xl);
+  background-color: var(--color-gainsboro-100);
+  box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.25);
+  height: 100px;
+  opacity: 0;
+}
+.frame-child.animate {
+  animation: 1s ease 0s 1 normal forwards slide-in-top;
+}
+.certification1,
+.education1,
+.sankalp1 {
+  text-decoration: none;
+  position: absolute;
+  color: inherit;
+  opacity: 0;
+}
+.sankalp1 {
+  top: 27px;
+  left: 114px;
+  font-size: var(--font-size-21xl);
+  font-style: italic;
+  font-weight: 700;
+}
+.certification1.animate,
+.contact1.animate,
+.education1.animate,
+.projects2.animate,
+.sankalp1.animate,
+.skills1.animate {
+  animation: 1s ease 1.5s 1 normal forwards slide-in-top;
+}
+.certification1,
+.education1 {
+  top: 31px;
+  left: 471px;
+}
+.certification1 {
+  left: 669px;
+}
+.skills1 {
+  text-decoration: none;
+  left: 895px;
+}
+.contact1,
+.projects2,
+.skills1 {
+  position: absolute;
+  top: 31px;
+  color: inherit;
+  opacity: 0;
+}
+.projects2 {
+  text-decoration: underline;
+  left: 1025px;
+  font-weight: 700;
+}
+.contact1 {
+  text-decoration: none;
+  left: 1196px;
+}
+.skillsprojectvariant3-parent {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-comic-neue);
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./frame-8.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic Neue:ital,wght@0,400;0,700;1,700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="certificatevariant3-parent">
+      <div class="certificatevariant3">
+        <label class="certification3" data-animate-on-scroll
+          >Certification</label
+        >
+        <img
+          class="certificatevariant3-child"
+          alt=""
+          src="./public/rectangle-7@2x.png"
+          data-animate-on-scroll
+        />
+
+        <label class="programming-in-c-container" data-animate-on-scroll>
+          <ul class="programming-in-c-programming-i">
+            <li class="programming-in-c">Programming In C</li>
+            <li class="programming-in-c">Programming In C++</li>
+            <li class="programming-in-c">Programming In Java and Adv. Java</li>
+            <li class="programming-in-c">Programming In Python</li>
+            <li>CCC (Course on Computer Concepts)</li>
+          </ul>
+        </label>
+        <img
+          class="image-removebg-preview-2-1"
+          alt=""
+          src="./public/imageremovebgpreview-2-1@2x.png"
+          data-animate-on-scroll
+        />
+
+        <div class="certificatevariant3-item" data-animate-on-scroll></div>
+        <a class="sankalp3" href="./index.html" data-animate-on-scroll>Sankalp</a>
+        <a class="education3" href="./frame-7.html" data-animate-on-scroll>Education</a>
+        <a class="certification4" hredf="#"data-animate-on-scroll>Certification</a>
+        <a class="skills4" href="./frame-9.html" data-animate-on-scroll
+          >Skills</a
+        >
+        <a class="projects4" href="./frame-10.html" data-animate-on-scroll
+          >Projects</a
+        >
+        <a class="contact3" href="./frame-11.html" data-animate-on-scroll
+          >Contact</a
+        >
+      </div>
+    </div>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>

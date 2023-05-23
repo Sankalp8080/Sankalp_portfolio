@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./frame-10.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic Neue:ital,wght@0,400;0,700;1,700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="skillsprojectvariant3-parent">
+      <div class="skillsprojectvariant3">
+        <img
+          class="skillsprojectvariant3-child"
+          alt=""
+          src="./public/rectangle-10@2x.png"
+          data-animate-on-scroll
+        />
+
+        <img
+          class="envio-18-removebg-preview-1-icon"
+          alt=""
+          src="./public/envio18removebgpreview-1@2x.png"
+          data-animate-on-scroll
+        />
+
+        <label class="projects1" data-animate-on-scroll>Projects</label>
+        <label class="portfolio-figma-container" data-animate-on-scroll>
+          <ul class="portfolio-figma-flutter-g">
+            <li class="portfolio-figma">Portfolio (Figma + Flutter)</li>
+            <li class="portfolio-figma">
+              GYM Management System (ASP.net Website)
+            </li>
+            <li class="portfolio-figma">
+              Visual Aid For Impaired People (Python + android)
+            </li>
+            <li class="portfolio-figma">Emotion To Emoji (Python)</li>
+            <li class="portfolio-figma">SMART EYE (Python)</li>
+            <li class="portfolio-figma">Match The Tokens (Blockchain)</li>
+            <li class="portfolio-figma">
+              Logistic Management System (Website)
+            </li>
+            <li class="portfolio-figma">Grocery Site (Website)</li>
+            <li class="portfolio-figma">Connect Word (android app)</li>
+            <li>Rock Paper Scissor game (Python)</li>
+          </ul>
+        </label>
+      </div>
+      <div class="frame-child" data-animate-on-scroll></div>
+      <a class="sankalp1" href="./index.html" data-animate-on-scroll>Sankalp</a>
+      <a class="education1" href="./frame-7.html" data-animate-on-scroll
+        >Education</a
+      >
+      <a class="certification1" href="./frame-8.html" data-animate-on-scroll
+        >Certification</a
+      >
+      <a class="skills1" href="./frame-9.html" data-animate-on-scroll>Skills</a>
+      <a class="projects2" href="#" data-animate-on-scroll>Projects</a>
+      <a class="contact1" href="./frame-11.html" data-animate-on-scroll
+        >Contact</a
+      >
+    </div>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>
